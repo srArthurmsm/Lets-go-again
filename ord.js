@@ -13,6 +13,7 @@ function escolha(){
 function ordena(){
     var radios = document.getElementsByName("sort");
     for (var i = 0; i < radios.length; i++) {
+        res.innerHTML = ""
         if (radios[i].checked) {
             console.log("Escolheu: " + radios[i].value);
             if (radios[i].value == "Bubble"){
@@ -26,6 +27,7 @@ function ordena(){
                                 array[j-1] = resto
                             }
                         }
+                        res.innerHTML += "<br>" + array
                     }
                 } else {
                     for(i=0;i<array.length;i++){
@@ -36,6 +38,7 @@ function ordena(){
                                 array[j-1] = resto
                             }
                         }
+                        res.innerHTML += "<br>" + array
                     }
                 }
             } else if (radios[i].value == "Insertion"){
@@ -49,6 +52,7 @@ function ordena(){
                         j--
                         }
                         array[j+1]=valor_atual
+                        res.innerHTML += "<br>" + array
                     }
                 } else {
                     for(i=1;i<array.length;i++){
@@ -59,6 +63,7 @@ function ordena(){
                         j--
                         }
                         array[j+1]=valor_atual
+                        res.innerHTML += "<br>" + array
                     }
                 }
             } else {
@@ -75,7 +80,9 @@ function ordena(){
                         valor_atual = array[i]
                         array[i]=array[menor]
                         array[menor]=valor_atual
+                        res.innerHTML += "<br>" + array
                         }
+                        
                         }
                 } else {
                     for(i=0;i<array.length;i++){
@@ -89,12 +96,14 @@ function ordena(){
                         valor_atual = array[i]
                         array[i]=array[menor]
                         array[menor]=valor_atual
+                        res.innerHTML += "<br>" + array
                         }
+                        
                     }
                 }
             }
                         
-            res.innerHTML = array
+            
         }
     }
     

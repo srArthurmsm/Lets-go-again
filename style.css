@@ -1,3 +1,41 @@
 iframe{
     border-radius: 20px;
 }
+fieldset{
+    border-style: dashed black;
+}
+body{
+    background-color: wheat;
+}
+legend{
+    background-color: black;
+    color: rgb(255, 255, 255);
+    padding: 5px;
+}
+a, button{
+    background-color: black;
+    border-radius: 0px;
+    border: black 0px;
+    color: white;
+    padding: 5px;
+}
+a:hover,
+a:focus,
+button:hover,
+button:focus {
+  color: #999;
+}
+a:active,
+button:active {
+  background-color: white;
+  color: black;
+  outline: 1px solid black;
+}
+img{
+    border-radius: 20px;
+}
+#center{
+    display: block;
+    align-items: center;
+    text-align: center;
+}
