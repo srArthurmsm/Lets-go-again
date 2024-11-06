@@ -7,8 +7,14 @@ function add(){
     array.push(num)
     res.innerHTML = array
 }
-function escolha(){
-    
+function ale(){
+    array = []
+    let num = Number(document.getElementById("num").value)
+    for(i=0;i<num;i++){
+        array.push((Math.floor(Math.random() * (20 - 1 + 1) + 1)))
+    }
+    console.log(array)
+    res.innerHTML = array
 }
 function ordena(){
     var radios = document.getElementsByName("sort");
