@@ -1,8 +1,9 @@
 let array = []
 let res = document.getElementById("res")
 let resto = 0
-
+let tentativas = 0
 function add(){
+    array = []
     let num = Number(document.getElementById("num").value)
     array.push(num)
     res.innerHTML = array
@@ -17,6 +18,7 @@ function ale(){
     res.innerHTML = array
 }
 function ordena(){
+    let tentativas = 0
     var radios = document.getElementsByName("sort");
     for (var i = 0; i < radios.length; i++) {
         res.innerHTML = ""
@@ -31,9 +33,9 @@ function ordena(){
                                 resto = array[j]
                                 array[j] = array[j-1]
                                 array[j-1] = resto
+                                tentativas += 1
                             }
                         }
-                        res.innerHTML += "<br>" + array
                     }
                 } else {
                     for(i=0;i<array.length;i++){
@@ -42,9 +44,9 @@ function ordena(){
                                 resto = array[j]
                                 array[j] = array[j-1]
                                 array[j-1] = resto
+                                tentativas += 1
                             }
                         }
-                        res.innerHTML += "<br>" + array
                     }
                 }
             } else if (radios[i].value == "Insertion"){
@@ -58,7 +60,7 @@ function ordena(){
                         j--
                         }
                         array[j+1]=valor_atual
-                        res.innerHTML += "<br>" + array
+                        tentativas += 1
                     }
                 } else {
                     for(i=1;i<array.length;i++){
@@ -69,7 +71,7 @@ function ordena(){
                         j--
                         }
                         array[j+1]=valor_atual
-                        res.innerHTML += "<br>" + array
+                        tentativas += 1
                     }
                 }
             } else {
@@ -86,9 +88,8 @@ function ordena(){
                         valor_atual = array[i]
                         array[i]=array[menor]
                         array[menor]=valor_atual
-                        res.innerHTML += "<br>" + array
                         }
-                        
+                        tentativas += 1
                         }
                 } else {
                     for(i=0;i<array.length;i++){
@@ -102,13 +103,13 @@ function ordena(){
                         valor_atual = array[i]
                         array[i]=array[menor]
                         array[menor]=valor_atual
-                        res.innerHTML += "<br>" + array
+                        tentativas += 1
                         }
                         
                     }
                 }
             }
-                        
+            res.innerHTML =array + " Tentativas: " + tentativas        
             
         }
     }
