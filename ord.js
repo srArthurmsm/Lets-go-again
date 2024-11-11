@@ -33,8 +33,8 @@ function ordena(){
                                 resto = array[j]
                                 array[j] = array[j-1]
                                 array[j-1] = resto
-                                tentativas += 1
                             }
+                            tentativas += 1
                         }
                     }
                 } else {
@@ -44,8 +44,8 @@ function ordena(){
                                 resto = array[j]
                                 array[j] = array[j-1]
                                 array[j-1] = resto
-                                tentativas += 1
                             }
+                            tentativas += 1
                         }
                     }
                 }
@@ -78,6 +78,7 @@ function ordena(){
                 let reverse = document.getElementById("reverse");
                 if (reverse.checked == true){
                     for(i=0;i<array.length;i++){
+                        tentativas += 1
                         menor = i
                         for(j=i+1;j<array.length;j++){
                         if(array[j]>array[menor]){
@@ -89,7 +90,6 @@ function ordena(){
                         array[i]=array[menor]
                         array[menor]=valor_atual
                         }
-                        tentativas += 1
                         }
                 } else {
                     for(i=0;i<array.length;i++){
