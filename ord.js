@@ -27,8 +27,8 @@ function ordena(){
             if (radios[i].value == "Bubble"){
                 let reverse = document.getElementById("reverse");
                 if (reverse.checked == true){
-                    for(i=0;i<array.length;i++){
-                        for(j=1;j<array.length;j++){
+                    for(i=0;i<array.length - 1;i++){
+                        for(j=0;j<array.length - 1;j++){
                             if(array[j - 1] < array[j]){
                                 resto = array[j]
                                 array[j] = array[j-1]
@@ -38,8 +38,8 @@ function ordena(){
                         }
                     }
                 } else {
-                    for(i=0;i<array.length;i++){
-                        for(j=1;j<array.length;j++){
+                    for(i=0;i<array.length - 1;i++){
+                        for(j=0;j<array.length - 1;j++){
                             if(array[j - 1] > array[j]){
                                 resto = array[j]
                                 array[j] = array[j-1]
