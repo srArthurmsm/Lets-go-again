@@ -18,6 +18,7 @@ a, button{
     border: black 0px;
     color: white;
     padding: 5px;
+    text-decoration: none;
 }
 a:hover,
 a:focus,
@@ -38,4 +39,7 @@ img{
     display: block;
     align-items: center;
     text-align: center;
+}
+p, a{
+    font-size: large;
 }
