@@ -43,3 +43,8 @@ img{
 p, a{
     font-size: large;
 }
+#smaller{
+    font-size: 25%;
+    margin-top: 2%;
+    display: inline-block;
+}
