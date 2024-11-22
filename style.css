@@ -6,6 +6,7 @@ fieldset{
 }
 body{
     background-color: wheat;
+    font-family: 'monaco';
 }
 legend{
     background-color: black;
