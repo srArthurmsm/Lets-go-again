@@ -49,3 +49,27 @@ p, a{
     margin-top: 2%;
     display: inline-block;
 }
+@media (max-width: 600px) {
+    a{
+        margin-right: 5px;
+        margin-top: 99999999px;
+        align-items: center;
+        text-align: center;
+        padding: 5px;
+    }
+    button{
+        padding: 5px;
+        font-size: larger;
+    }
+    img, iframe{
+        width: 290px;
+        height: auto;
+    }
+    p{
+        font-size: larger;
+        font-weight: 900;
+    }
+    #smaller{
+        font-size: 12px;
+    }
+  }
