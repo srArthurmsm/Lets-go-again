@@ -3,7 +3,6 @@ let res = document.getElementById("res")
 let resto = 0
 let tentativas = 0
 function add(){
-    array = []
     let num = Number(document.getElementById("num").value)
     array.push(num)
     res.innerHTML = array
